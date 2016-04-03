@@ -1,0 +1,19 @@
+// In Eclipse the projects facets still have to be set up manually. (DynamicWeb, ...)
+// Don't forget to set the version of the facet to the latest version
+// Make sure src/main/webapp is added to the Web Deploy Assembly. Folder /WebContent is used by default in Eclipse
+// ejb and war projects have to be added to the ear project manually 
+// Using just war without ear is the modern approach but we show the ear way also
+
+group 'egger.software.examples'
+version '1.0-SNAPSHOT'
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+
+}

@@ -1,0 +1,19 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0">
+
+  <persistence-unit name="campusDB" transaction-type="RESOURCE_LOCAL"> <!-- JTA -->
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>edu.campus02.domain.Animal</class>
+    <class>edu.campus02.domain.Student</class>
+    <class>edu.campus02.domain.Species</class>
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby:jpaDB;create=true" />
+      <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+      <property name="eclipselink.logging.level.sql" value="FINE"/>
+      <property name="eclipselink.logging.parameters" value="true"/>
+    </properties>
+  </persistence-unit>
+
+</persistence>    
